@@ -1,4 +1,6 @@
 
+import Image from "next/image";
+
 export default function Home() {
       
       <>
@@ -90,7 +92,15 @@ export default function Home() {
         <rect x="16" y="16" width="32" height="32" rx="6" fill="url(#cube5g)"/>
       </svg>
       <main className="relative z-10 flex flex-col items-center justify-center gap-10 py-20 px-4 w-full max-w-5xl">
-        <h1 className="text-5xl sm:text-7xl font-extrabold text-white drop-shadow-2xl text-center mb-4 animate-fade-in">
+        <h1 className="text-5xl sm:text-7xl font-extrabold text-white drop-shadow-2xl text-center mb-4 animate-fade-in flex items-center justify-center gap-4">
+          <Image
+            src="/sih.png" // Change to your desired image path in public/
+            alt="Ping City Logo"
+            width={90}
+            height={90}
+            className="inline-block rounded-xl shadow-lg"
+            priority
+          />
           Ping City
         </h1>
         
