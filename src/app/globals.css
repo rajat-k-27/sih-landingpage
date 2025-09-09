@@ -1,0 +1,142 @@
+
+.animate-float-cube6 {
+  animation: float-cube6 8.5s ease-in-out infinite alternate;
+}
+.animate-float-cube7 {
+  animation: float-cube7 7.5s ease-in-out infinite alternate;
+}
+.animate-float-cube8 {
+  animation: float-cube8 9.5s ease-in-out infinite alternate;
+}
+@keyframes float-cube6 {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-18px) scale(1.08) rotate(7deg); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); }
+}
+@keyframes float-cube7 {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-22px) scale(1.12) rotate(-9deg); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); }
+}
+@keyframes float-cube8 {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-15px) scale(1.06) rotate(11deg); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); }
+}
+
+.animate-float-cube1 {
+  animation: float-cube1 7s ease-in-out infinite alternate;
+}
+.animate-float-cube2 {
+  animation: float-cube2 9s ease-in-out infinite alternate;
+}
+.animate-float-cube3 {
+  animation: float-cube3 8s ease-in-out infinite alternate;
+}
+.animate-float-cube4 {
+  animation: float-cube4 10s ease-in-out infinite alternate;
+}
+.animate-float-cube5 {
+  animation: float-cube5 6s ease-in-out infinite alternate;
+}
+@keyframes float-cube1 {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-30px) scale(1.05) rotate(8deg); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); }
+}
+@keyframes float-cube2 {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-40px) scale(1.1) rotate(-10deg); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); }
+}
+@keyframes float-cube3 {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-20px) scale(1.08) rotate(12deg); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); }
+}
+@keyframes float-cube4 {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-35px) scale(1.04) rotate(-6deg); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); }
+}
+@keyframes float-cube5 {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-25px) scale(1.12) rotate(10deg); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); }
+}
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+}
+
+
+.animated-bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation:
+    blob-move 16s ease-in-out infinite alternate,
+    blob-fadein 1.2s cubic-bezier(0.4,0,0.2,1) 0s 1 both;
+  z-index: 0;
+}
+.animated-bg-blob2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.35;
+  animation:
+    blob-move2 18s ease-in-out infinite alternate,
+    blob-fadein 1.2s cubic-bezier(0.4,0,0.2,1) 0s 1 both;
+  z-index: 0;
+}
+@keyframes blob-fadein {
+  0% { opacity: 0; transform: scale(0.7); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes blob-move {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(60px, -40px) scale(1.1); }
+  100% { transform: translate(-40px, 60px) scale(1); }
+}
+@keyframes blob-move2 {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(-80px, 40px) scale(1.15); }
+  100% { transform: translate(40px, -60px) scale(1); }
+}
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+.animate-fade-in {
+  animation: fade-in 1s cubic-bezier(0.4,0,0.2,1) both;
+}
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
