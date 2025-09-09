@@ -91,7 +91,7 @@ export default function Home() {
       </svg>
       <main className="relative z-10 flex flex-col items-center justify-center gap-10 py-20 px-4 w-full max-w-5xl">
         <h1 className="text-5xl sm:text-7xl font-extrabold text-white drop-shadow-2xl text-center mb-4 animate-fade-in">
-          Civic Issue Platform
+          Ping City
         </h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
